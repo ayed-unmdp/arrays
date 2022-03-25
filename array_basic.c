@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "array_basic.h"
 
 void array_print(int a[], int n) {
     for (int i = 0; i < n; i++) {

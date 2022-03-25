@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "array_search.c"
+#include "array_search.h"
 
 void main() {
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("\n\n\n\n");
     int a[] = {1, 2, 5, 8, 12, 20, 21};
     int n = (int)sizeof(a) / sizeof(int);
     int where = 0;

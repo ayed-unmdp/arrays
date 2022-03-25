@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "array_search.h"
+
 int sequential_search(int key, int a[], int n) {
     int i = 0;
     while ((i < n) && (a[i] != key)) {
@@ -21,15 +23,15 @@ int sequential_sorted_search(int key, int a[], int n) {
 int binary_sorted_search(int key, int a[], int n) {
     int high = n - 1;
     int low = 0;
-    int i = (high - low) / 2;
-    while ((low < high) && (a[i] != key)) {
-        if (key < a[i]) {
-            high = i - 1;
+    int mid = (high - low) / 2;
+    while ((low < high) && (a[mid] != key)) {
+        if (key < a[mid]) {
+            high = mid - 1;
         } else {
-            low = i + 1;
+            low = mid + 1;
         }
-        i = low + (high - low) / 2;
+        mid = (high + low) / 2;
     }
-    return (a[i] == key) ? i : n;
+    return (a[mid] == key) ? mid : n;
 }
 
