@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "*.tcc": "c",
+        "string.h": "c",
+        "btree.h": "c",
+        "stdlib.h": "c",
+        "array_basic.h": "c"
+    }
+}
