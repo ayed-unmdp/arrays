@@ -9,6 +9,8 @@ int sequential_search(int key, int a[], int n) {
     while ((i < n) && (a[i] != key)) {
         i++;
     }
+    if (i >= n)
+        i = -1;
     return i;
 }
 
@@ -34,4 +36,5 @@ int binary_sorted_search(int key, int a[], int n) {
     }
     return (a[mid] == key) ? mid : n;
 }
+
 

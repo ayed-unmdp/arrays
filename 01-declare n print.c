@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "array_search.h"
+
 /**
  * @brief Imprime el contenido de un arreglo de enteros
  *
@@ -67,6 +69,25 @@ void main() {
     // Declaración y Asignación
     int arreglo_ejemplo[] = {1, 2, 3, 4, 5, 6};
 
+    // Impresión de contenido
+    printf("\nArreglo de enteros\n");
+    print_contenido_1(arreglo_enteros, 3);
+
+    printf("\nArreglo de ejemplo\n");
+    print_contenido_1(arreglo_ejemplo, 6);
+
+    // Búsqueda secuencial 
+    int pos = sequential_search(3, arreglo_ejemplo, 6);
+    if (pos >= 0){
+        printf("El valor 3 se encuentra en la posición %d\n", pos);
+    } else {
+        printf("El valor 3 no se encuentra en el arreglo\n");
+    }
+
+
+
+    /*
+
     // Declaración como un puntero
     int* arreglo_puntero;
     int* pos;
@@ -96,4 +117,6 @@ void main() {
     print_contenido_2(arreglo_puntero, 3);
     print_cadena_1(cadena);
     print_cadena_2(otra_cadena);
+
+    */
 }

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "matrix.h"
 
+typedef struct _num_matrix num_matrix; //num_matrix is a struct that contains a matrix
 
 
 /**
@@ -80,5 +81,5 @@ void _print_float (void* value){
  * @param prt función que permite imprimir un valor de la matriz
  */
 void num_matrix_print(num_matrix* m){
-    matrix_print(m->m, _print_float);
+    //matrix_print(m->m, _print_float);
 }

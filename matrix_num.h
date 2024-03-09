@@ -3,7 +3,7 @@
 
 #include "matrix.h"
 
-typedef struct {
+typedef struct _num_matrix {
     matrix* m;
 } num_matrix; //num_matrix is a struct that contains a matrix
 

@@ -39,4 +39,7 @@ void* vector_remove(vector* v, int index);
 // Permite eliminar un elemento del vector
 
 
+void vector_print(vector* v, void (*print)(void*))
+// Permite imprimir un vector por consola
+
 #endif
