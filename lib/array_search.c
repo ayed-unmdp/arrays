@@ -8,10 +8,8 @@ int sequential_search(int key, int a[], int n) {
     int i = 0;
     while ((i < n) && (a[i] != key)) {
         i++;
-    }
-    if (i >= n)
-        i = -1;
-    return i;
+    }    
+    return (i >= n)? -1 : i;
 }
 
 int sequential_sorted_search(int key, int a[], int n) {

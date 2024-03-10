@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "array_search.h"
+#include "lib/array_search.h"
 
 /**
  * @brief Imprime el contenido de un arreglo de enteros
@@ -84,6 +84,12 @@ void main() {
         printf("El valor 3 no se encuentra en el arreglo\n");
     }
 
+    pos = sequential_search(7, arreglo_ejemplo, 6);
+    if (pos >= 0){
+        printf("El valor 7 se encuentra en la posición %d\n", pos);
+    } else {
+        printf("El valor 7 no se encuentra en el arreglo\n");
+    }
 
 
     /*
