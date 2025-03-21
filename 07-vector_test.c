@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "vector.h"
+#include "tda/vector.h"
 
 /**
  * @brief print a vector of int*
@@ -52,7 +52,8 @@ void test_vector_int() {
 
     // remove an element
     aux = vector_remove(v, 2);
-    printf("Eliminado: %d\n", *aux);
+    if (aux)
+        printf("Eliminado: %d\n", *aux);
     free(aux);
     print_vector_int(v);
 
@@ -66,7 +67,8 @@ void test_vector_int() {
 
     // remove a value in the middle of the vector
     aux = vector_remove(v, 5);
-    printf("Valor eliminado %d \n", *aux);
+    if (aux)
+        printf("Valor eliminado %d \n", *aux);
     print_vector_int(v);
 
     // remove all values
@@ -129,6 +131,7 @@ int cmp_int (const void* a, const void* b) {
 }
 
 int vector_binary_search(vector* v, void* value, int (*cmp)(const void*, const void*)) {
+    if (vector_size(v) == 0) return -1;
     int low = 0;
     int high = vector_size(v) - 1;
     int mid = (low + high) / 2;    // midpoint of search   
@@ -168,7 +171,7 @@ void test_vector_search() {
 }
 
 void main() { 
-    //test_vector_int();
-    //test_vector_str(); 
+    test_vector_int();
+    test_vector_str(); 
     test_vector_search();
 }

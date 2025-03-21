@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "array_sort.h": "c",
+        "array_void.h": "c",
+        "string.h": "c",
+        "stdio.h": "c"
+    }
+}

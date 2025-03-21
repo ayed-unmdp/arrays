@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "array_sort.h"
+#include "array_sort.h"
 
 void swap(int* a, int* b) {
     int aux = *a;

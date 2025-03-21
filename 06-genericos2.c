@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "array_void.h"
+#include "lib/array_void.h"
 
 typedef struct{
     int id;
@@ -43,11 +43,11 @@ void main (){
         a[i] = e;
     }
 
-    array_print(a, n, prt_elem);
-    bubble_sort_func(a, n, cmp_elem_id);
-    array_print(a, n, prt_elem);
-    bubble_sort_func(a, n, cmp_elem_nombre);
-    array_print(a, n, prt_elem);
+    generic_array_print(a, n, prt_elem);
+    generic_bubble_sort_func(a, n, cmp_elem_id);
+    generic_array_print(a, n, prt_elem);
+    generic_bubble_sort_func(a, n, cmp_elem_nombre);
+    generic_array_print(a, n, prt_elem);
     
 
 }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "array_basic.h"
+#include "lib/array_basic.h"
 
 
 void main() {

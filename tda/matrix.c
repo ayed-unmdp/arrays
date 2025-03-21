@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include "matrix.h"
 
+
+/// @brief estructura de matriz
+typedef struct _matrix{
+    t_matrix_elem* a;
+    int rows;
+    int columns;
+ } matrix;
+
+
 /**
  * @brief Crea la matriz con el tamaño apropiado según las dimensiones establecidas.
  * 
@@ -48,9 +57,9 @@ int matrix_columns(matrix* m){
  * @param m puntero a la matriz 
  * @param row fila 
  * @param col columna 
- * @return void* 
+ * @return t_matrix_elem 
  */
-void* matrix_get(matrix* m, int row, int col){
+t_matrix_elem matrix_get(matrix* m, int row, int col){
     /*** COMPLETAR ***/
 }
 
@@ -62,7 +71,7 @@ void* matrix_get(matrix* m, int row, int col){
  * @param col columna
  * @param value valor a asignar
  */
-void matrix_set(matrix* m, int row, int col, void* value){
+void matrix_set(matrix* m, int row, int col, t_matrix_elem value){
     /*** COMPLETAR ***/
 }
 
@@ -72,6 +81,6 @@ void matrix_set(matrix* m, int row, int col, void* value){
  * @param m puntero a la matriz 
  * @param prt función que permite imprimir un valor de la matriz
  */
-void matrix_print(matrix* m, void prt(void*)){
+void matrix_print(matrix* m, void prt(t_matrix_elem)){
     /*** COMPLETAR ***/
 }

@@ -3,7 +3,8 @@
 #include <string.h>
 #include <time.h>
 
-#include "array_void.h"
+#include "lib/array_void.h"
+
 
 int cmp_int (void* a, void* b){
     int* aa = (int*) a;
@@ -29,9 +30,9 @@ void main (){
         a[i] = r;
     }
 
-    array_print(a, n, prt_int);
-    bubble_sort_func(a, n, cmp_int);
-    array_print(a, n, prt_int);
+    generic_array_print(a, n, prt_int);
+    generic_bubble_sort_func(a, n, cmp_int);
+    generic_array_print(a, n, prt_int);
 
 }
 

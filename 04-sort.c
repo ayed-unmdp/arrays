@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "array_sort.h"
-#include "array_basic.h"
+#include "lib/array_sort.h"
+#include "lib/array_basic.h"
 
 void main() {
     printf("\n\n\n\n");

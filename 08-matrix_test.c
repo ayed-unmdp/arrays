@@ -3,9 +3,8 @@
 #include <string.h>
 #include <time.h>
 
-#include "matrix.h"
-#include "matrix_num.h"
-#include "vector.h"
+#include "tda/matrix.h"
+#include "tda/vector.h"
 
 
 void print_int(void* value) {
@@ -24,7 +23,7 @@ void replace_column(matrix* m, int col, vector* v) {
 }
 
 //multiplicar dos matrices
-void multiply_matrix(num_matrix* m1, num_matrix* m2, num_matrix* m3) {
+void multiply_matrix(matrix* m1, matrix* m2, matrix* m3) {
     /*** COMPLETAR ***/
 }
 
@@ -69,39 +68,42 @@ void test_matrix_int() {
 
 
 // rellenar la matriz con numeros aleatorios
-void fill_matrix(num_matrix* m, int max) {
+void fill_matrix(matrix* m, int max) {
     static int i = 0;
-    float aux;
     i++;
     srand(time(NULL)+i);
-    for (int i = 0; i < num_matrix_rows(m); i++) {
-        for (int j = 0; j < num_matrix_columns(m); j++) {
-            int auxi = rand() % max;
+    for (int i = 0; i < matrix_rows(m); i++) {
+        for (int j = 0; j < matrix_columns(m); j++) {
+            float* auxi = malloc(sizeof(float));
+            *auxi = rand() % max;
             //aux = (float)rand()/(float)(RAND_MAX/100);
-            aux = auxi;
-            num_matrix_set(m, i, j, aux);
+            matrix_set(m, i, j, auxi);
         }
     }
 }
 
+void prt_float(void* value) {
+    printf("%5.2f ", *(float*)value);
+}
+
 void test_matrix_float() {
     
-    num_matrix* a = num_matrix_new(3, 2);
-    num_matrix* b = num_matrix_new(2, 4);
-    num_matrix* c = num_matrix_new(3, 4);
+    matrix* a = matrix_new(3, 2);
+    matrix* b = matrix_new(2, 4);
+    matrix* c = matrix_new(3, 4);
 
     printf("\n\nInicio pruebas de matriz de flotantes\n");
     fill_matrix (a, 10);
     fill_matrix (b, 10);
     
     printf("\nMatriz A\n");
-    num_matrix_print(a);
+    matrix_print(a,prt_float);
     printf("\nMatriz B\n");
-    num_matrix_print(b);
+    matrix_print(b,prt_float);
 
     multiply_matrix(a, b, c);
     printf("\nMatriz C\n");
-    num_matrix_print(c);
+    matrix_print(c,prt_float);
 
 }
 

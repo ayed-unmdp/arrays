@@ -19,7 +19,7 @@ int binary_sorted_search_func(int key, int a[], int n, int cmp (int, int)) {
     return (a[i] == key) ? i : n;
 }
 
-void swap(int* a, int* b) {
+void _swap(int* a, int* b) {
     int aux = *a;
     *a = *b;
     *b = aux;
@@ -31,7 +31,7 @@ void bubble_sort_func(int a[], int n, int cmp (int, int) ) {
         swapped = 0;
         for (int i = 1; i < n; i++) {
             if (cmp(a[i - 1],a[i]) > 0) { // a[i - 1] > a[i] ?
-                swap(&a[i - 1], &a[i]);
+                _swap(&a[i - 1], &a[i]);
                 swapped = 1;
             }
             printf(".");
@@ -50,13 +50,6 @@ int compare_inv (int a, int b) {
     return b - a;
 }
 
-
-void array_print(int a[], int n) {
-    for (int i = 0; i < n; i++) {
-        printf(" %02d ", a[i]);
-    }
-    printf("\n");
-}
 
 
 

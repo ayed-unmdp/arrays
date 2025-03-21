@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "array_search.h"
+#include "lib/array_search.h"
 
 void main() {
     printf("\n\n\n\n");
