@@ -37,6 +37,16 @@ void array_del(int a[], int* n, int index) {
     }
 }
 
+int array_remove(int a[], int* n, int pos) {
+    int value = a[pos];
+    (*n)--;
+    for (int i = pos; i < *n; i++) {
+        a[i] = a[i+1];
+    }    
+    return value;
+}
+
+
 int* array_create(int n) {
     int* result;
     result = malloc(sizeof(int) * n);
